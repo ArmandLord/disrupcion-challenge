@@ -1,5 +1,10 @@
+import { Header } from "./components";
 const App = () => {
-  return <div>Hola</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
 
 export default App;
