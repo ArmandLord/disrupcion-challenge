@@ -1,5 +1,6 @@
 import { createContext, useReducer, PropsWithChildren } from "react";
 import { AppReducer } from "./AppReducer";
+import { ADD_TRANSACTION, DELETE_TRANSACTION } from "./Types";
 
 export interface TransactionInterface {
   id: number;
@@ -7,7 +8,7 @@ export interface TransactionInterface {
   amount: number;
 }
 
-interface TypeInitialState {
+export interface TypeInitialState {
   transactions: TransactionInterface[];
 }
 
@@ -37,14 +38,14 @@ export const GlobalProvider = ({ children }: PropsWithChildren) => {
   // Actions
   function deleteTransaction(id: number) {
     dispatch({
-      type: "DELETE_TRANSACTION",
+      type: DELETE_TRANSACTION,
       payload: id,
     });
   }
 
   function addTransaction(transaction: TransactionInterface) {
     dispatch({
-      type: "ADD_TRANSACTION",
+      type: ADD_TRANSACTION,
       payload: transaction,
     });
   }

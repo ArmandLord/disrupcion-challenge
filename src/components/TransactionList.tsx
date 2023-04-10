@@ -9,9 +9,13 @@ export const TransactionList = () => {
     <div>
       <h3>History</h3>
       <ul>
-        {transactions.map((transaction) => (
-          <Transaction key={transaction.id} transaction={transaction} />
-        ))}
+        {transactions.length === 0 ? (
+          <p>No transactions</p>
+        ) : (
+          transactions.map((transaction) => (
+            <Transaction key={transaction.id} transaction={transaction} />
+          ))
+        )}
       </ul>
     </div>
   );
