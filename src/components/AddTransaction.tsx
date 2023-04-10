@@ -1,12 +1,28 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
 
 export const AddTransaction = () => {
+  const { addTransaction } = useContext(GlobalContext);
   const [text, setText] = useState("");
   const [amount, setAmount] = useState(0);
+
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const newTransaction = {
+      id: Math.floor(Math.random() * 100000000),
+      text,
+      amount: +amount,
+    };
+    addTransaction(newTransaction);
+    // limpia los campos
+    setText("");
+    setAmount(0);
+  };
+
   return (
     <div>
       <h3>Add new transaction</h3>
-      <form>
+      <form onSubmit={onSubmit}>
         <div>
           <label htmlFor="text">Text</label>
           <input
@@ -28,7 +44,7 @@ export const AddTransaction = () => {
             onChange={(event) => setAmount(+event.target.value)}
           />
         </div>
-        <button className="btn">Add transaction</button>
+        <button className="btn btn-primary">Add transaction</button>
       </form>
     </div>
   );
