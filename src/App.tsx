@@ -1,9 +1,20 @@
-import { Header } from "./components";
+import {
+  Balance,
+  Header,
+  IncomeExpenses,
+  TransactionList,
+  AddTransaction,
+} from "./components";
+
 const App = () => {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <Balance />
+      <IncomeExpenses />
+      <TransactionList />
+      <AddTransaction />
+    </>
   );
 };
 
