@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const IncomeExpenses = () => {
   const { transactions } = useContext(GlobalContext);
@@ -16,13 +17,20 @@ export const IncomeExpenses = () => {
 
   return (
     <div>
-      <div>
-        <h4>Income</h4>
-        <p>+${income}</p>
+      <div className="d-flex justify-content-around">
+        <div className="text-center">
+          <h4 className="fs-6 fw-normal text-success">Ingresos</h4>
+          <p className="fs-4 fw-bold text-success">+${income}</p>
+        </div>
+        <div className="border-start" style={{ height: "50px" }}></div>
+        <div className="text-center">
+          <h4 className="fs-6 fw-normal text-danger">Gastos</h4>
+          <p className="fs-4 fw-bold text-danger">-${expense}</p>
+        </div>
       </div>
-      <div>
-        <h4>Expense</h4>
-        <p>-${expense}</p>
+      <div className="d-flex flex-column align-items-center text-secondary">
+        <small>Ver analiticas</small>
+        <FontAwesomeIcon icon="chevron-down" />
       </div>
     </div>
   );

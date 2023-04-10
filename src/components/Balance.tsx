@@ -8,8 +8,10 @@ export const Balance = () => {
 
   return (
     <>
-      <h4>Yor Balance</h4>
-      <h1>${total}</h1>
+      <div className="text-center mb-2">
+        <h4 className="fs-6 fw-normal">Balance del mes</h4>
+        <h1 className="fw-bold">${total}</h1>
+      </div>
     </>
   );
 };
