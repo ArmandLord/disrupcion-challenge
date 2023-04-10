@@ -1,16 +1,11 @@
 import { createContext, useReducer, PropsWithChildren } from "react";
 import { AppReducer } from "./AppReducer";
 import { ADD_TRANSACTION, DELETE_TRANSACTION } from "./Types";
-
-export interface TransactionInterface {
-  id: number;
-  text: string;
-  amount: number;
-}
-
-export interface TypeInitialState {
-  transactions: TransactionInterface[];
-}
+import {
+  TransactionInterface,
+  TypeGlobalContext,
+  TypeInitialState,
+} from "../interfaces/TransactionInterfaces";
 
 // Initial State
 const initialState: TypeInitialState = {
@@ -21,12 +16,6 @@ const initialState: TypeInitialState = {
     { id: 4, text: "Camera", amount: 150 },
   ],
 };
-
-interface TypeGlobalContext {
-  transactions: TransactionInterface[];
-  deleteTransaction: (id: number) => void;
-  addTransaction: (transaction: TransactionInterface) => void;
-}
 
 // Create context
 export const GlobalContext = createContext({} as TypeGlobalContext);
