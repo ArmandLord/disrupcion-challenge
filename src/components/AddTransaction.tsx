@@ -43,13 +43,21 @@ export const AddTransaction = () => {
       >
         <form onSubmit={onSubmit} className="d-flex flex-column gap-2">
           <h3
-            className="text-center fs-5"
+            className="text-center fs-6 fw-bold m-0"
             style={{
               color: "#4a65a3",
             }}
           >
-            Agrega transacción
+            Agrega una transacción
           </h3>
+          <hr
+            style={{
+              background: "#4a65a3",
+              marginTop: "7px",
+              height: "2px",
+              border: "none",
+            }}
+          />
           <div>
             <label htmlFor="text" className="text-secondary">
               Descripción

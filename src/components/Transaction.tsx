@@ -26,7 +26,9 @@ export const Transaction: FC<Props> = ({ transaction }) => {
             marginRight: ".5rem",
           }}
         />
-        <p className="mb-0">{text}</p>
+        <p style={{ fontSize: "12px" }} className="mb-0 fw-bold">
+          {text}
+        </p>
       </span>
       <section>
         <span

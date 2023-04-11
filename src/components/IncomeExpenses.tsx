@@ -19,16 +19,29 @@ export const IncomeExpenses = () => {
     <div>
       <div className="d-flex justify-content-around">
         <div className="text-center">
-          <h4 className="fs-6 fw-normal text-success">Ingresos</h4>
+          <h4
+            style={{ fontSize: "12px" }}
+            className="m-0 fw-normal text-success"
+          >
+            Ingresos
+          </h4>
           <p className="fs-4 fw-bold text-success">+${income}</p>
         </div>
         <div className="border-start" style={{ height: "50px" }}></div>
         <div className="text-center">
-          <h4 className="fs-6 fw-normal text-danger">Gastos</h4>
+          <h4
+            style={{ fontSize: "12px" }}
+            className="m-0 fw-normal text-danger"
+          >
+            Gastos
+          </h4>
           <p className="fs-4 fw-bold text-danger">-${expense}</p>
         </div>
       </div>
-      <div className="d-flex flex-column align-items-center text-secondary">
+      <div
+        style={{ fontSize: "12px" }}
+        className="d-flex flex-column align-items-center text-secondary"
+      >
         <small>Ver analiticas</small>
         <FontAwesomeIcon icon="chevron-down" />
       </div>
