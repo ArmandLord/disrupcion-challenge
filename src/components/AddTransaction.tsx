@@ -1,5 +1,4 @@
 import { useAddTransaction } from "../hooks/useAddTransaction";
-import { useState } from "react";
 
 export const AddTransaction = () => {
   const {
@@ -18,6 +17,7 @@ export const AddTransaction = () => {
         className="btn btn-primary shadow"
         style={{
           width: "60%",
+          padding: ".6rem",
           position: "absolute",
           bottom: "0",
           left: "50%",

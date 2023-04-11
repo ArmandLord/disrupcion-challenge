@@ -15,7 +15,7 @@ const App = () => {
     <GlobalProvider>
       <ContainerApp>
         <Header />
-        <div className="card p-3 shadow-sm rounded-4">
+        <div className="card p-3 shadow-sm rounded-4 mb-3">
           <Balance />
           <IncomeExpenses />
         </div>
