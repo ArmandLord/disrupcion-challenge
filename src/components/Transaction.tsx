@@ -17,7 +17,17 @@ export const Transaction: FC<Props> = ({ transaction }) => {
 
   return (
     <li className="bg-white p-2 d-flex justify-content-between align-items-center shadow-sm rounded-2 mb-2">
-      <p className="mb-0">{text}</p>
+      <span className="d-flex align-items-center justify-content-between">
+        <FontAwesomeIcon
+          icon={amount > 0 ? "circle" : "square"}
+          style={{
+            color: amount < 0 ? "rgb(255,137,141)" : "rgb(116, 214, 142)",
+            fontSize: "2rem",
+            marginRight: ".5rem",
+          }}
+        />
+        <p className="mb-0">{text}</p>
+      </span>
       <section>
         <span
           className={
