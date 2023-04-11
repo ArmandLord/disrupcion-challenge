@@ -1,4 +1,5 @@
 import { useAddTransaction } from "../hooks/useAddTransaction";
+import { useHandleResize } from "../hooks/useHandleResize";
 
 export const AddTransaction = () => {
   const {
@@ -11,6 +12,7 @@ export const AddTransaction = () => {
     setOpenModal,
   } = useAddTransaction();
 
+  const { isMobile } = useHandleResize();
   return (
     <div>
       <button
@@ -18,7 +20,7 @@ export const AddTransaction = () => {
         style={{
           width: "60%",
           padding: ".6rem",
-          position: "fixed",
+          position: isMobile ? "fixed" : "relative",
           bottom: "0",
           left: "50%",
           transform: "translate(-50%, -50%)",
