@@ -10,9 +10,14 @@ import {
 // Initial State
 const initialState: TypeInitialState = {
   transactions: [
-    { id: 1, text: "Uber", amount: -97.63 },
-    { id: 2, text: "Transferencia Ana", amount: 103.47 },
-    { id: 3, text: "Netflix", amount: -105.2 },
+    { id: 1, text: "Uber", amount: -97.63, old: false },
+    { id: 2, text: "Transferencia Ana", amount: 103.47, old: false },
+    { id: 3, text: "Netflix", amount: -105.2, old: false },
+    // agreg propiedad old para mostrar transacciones anteriores
+    { id: 4, text: "Regalo para Mariana", amount: -299.99, old: true },
+    { id: 5, text: "Transferencia Gabriel", amount: 103.47, old: true },
+    { id: 6, text: "Buffalo boneless", amount: -120.0, old: true },
+    { id: 7, text: "Super", amount: 572.27, old: true },
   ],
 };
 

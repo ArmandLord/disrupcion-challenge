@@ -1,4 +1,7 @@
-import { TransactionInterface, TypeInitialState } from "./GlobalState";
+import {
+  TransactionInterface,
+  TypeInitialState,
+} from "../interfaces/TransactionInterfaces";
 import { ADD_TRANSACTION, DELETE_TRANSACTION } from "./Types";
 
 interface PropsReducer {

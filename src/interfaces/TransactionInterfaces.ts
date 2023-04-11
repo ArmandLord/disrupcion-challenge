@@ -2,6 +2,7 @@ export interface TransactionInterface {
   id: number;
   text: string;
   amount: number;
+  old?: boolean;
 }
 
 export interface TypeInitialState {
