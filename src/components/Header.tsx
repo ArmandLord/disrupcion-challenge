@@ -14,7 +14,13 @@ export const Header = () => {
     "Marzo",
   ];
   return (
-    <header className="d-flex justify-content-between align-items-center p-3 mb-3 bg-black rounded-bottom-4">
+    <header
+      style={{
+        background: "#4a65a3",
+        border: "none",
+      }}
+      className="d-flex justify-content-between align-items-center p-3 mb-3 rounded-bottom-4"
+    >
       {months.slice(0, 5).map((month, index) => {
         return (
           <h5

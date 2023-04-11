@@ -10,7 +10,9 @@ export const Balance = () => {
     <>
       <div className="text-center mb-2">
         <h4 className="fs-6 fw-normal">Balance del mes</h4>
-        <h1 className="fw-bold">${total}</h1>
+        <h1 className="fw-bold" style={{ color: "#4a65a3" }}>
+          ${total}
+        </h1>
       </div>
     </>
   );

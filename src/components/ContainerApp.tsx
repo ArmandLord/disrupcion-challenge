@@ -7,8 +7,9 @@ export const ContainerApp = ({ children }: PropsWithChildren) => {
         <div
           style={{
             position: "relative",
+            background: "#f5f5f5",
           }}
-          className="col-md-4 bg-secondary"
+          className="col-md-4 shadow rounded-4"
         >
           {children}
         </div>

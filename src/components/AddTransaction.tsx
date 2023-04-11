@@ -23,6 +23,8 @@ export const AddTransaction = () => {
           left: "50%",
           transform: "translate(-50%, -50%)",
           display: openModal ? "none" : "block",
+          background: "#4a65a3",
+          border: "none",
         }}
         onClick={() => setOpenModal(true)}
       >
@@ -40,10 +42,20 @@ export const AddTransaction = () => {
         className="bg-white p-3 rounded-2 shadow"
       >
         <form onSubmit={onSubmit} className="d-flex flex-column gap-2">
-          <h3 className="text-center fs-5">Agrega transacción</h3>
+          <h3
+            className="text-center fs-5"
+            style={{
+              color: "#4a65a3",
+            }}
+          >
+            Agrega transacción
+          </h3>
           <div>
-            <label htmlFor="text">Descripción</label>
+            <label htmlFor="text" className="text-secondary">
+              Descripción
+            </label>
             <input
+              className="form-control"
               type="text"
               placeholder="Uber, Netflix, etc..."
               value={text}
@@ -51,8 +63,11 @@ export const AddTransaction = () => {
             />
           </div>
           <div>
-            <label htmlFor="amount">Monto:</label>
+            <label htmlFor="amount" className="text-secondary">
+              Monto:
+            </label>
             <input
+              className="form-control"
               type="number"
               placeholder="Enter amount..."
               value={amount}
@@ -60,7 +75,15 @@ export const AddTransaction = () => {
             />
           </div>
           <div className="d-flex justify-content-center">
-            <button className="btn btn-primary">Agregar transacción</button>
+            <button
+              style={{
+                background: "#4a65a3",
+                border: "none",
+              }}
+              className="btn btn-primary"
+            >
+              Agregar transacción
+            </button>
           </div>
         </form>
       </section>
