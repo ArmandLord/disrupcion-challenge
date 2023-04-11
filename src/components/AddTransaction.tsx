@@ -18,7 +18,7 @@ export const AddTransaction = () => {
         style={{
           width: "60%",
           padding: ".6rem",
-          position: "absolute",
+          position: "fixed",
           bottom: "0",
           left: "50%",
           transform: "translate(-50%, -50%)",
