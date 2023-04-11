@@ -1,5 +1,6 @@
 import { FC, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface Props {
   transaction: {
@@ -13,16 +14,25 @@ export const Transaction: FC<Props> = ({ transaction }) => {
   const { deleteTransaction } = useContext(GlobalContext);
   const { text, amount } = transaction;
   const sing: string = amount < 0 ? "-" : "+";
+
   return (
-    <li>
-      {text}{" "}
-      <span
-        //   que sea rojo si es negativo o verde si es positivo usando bootstrap
-        className={amount < 0 ? "text-danger" : "text-success"}
-      >
-        {sing}${Math.abs(amount)}
-      </span>
-      <button onClick={() => deleteTransaction(transaction.id)}>x</button>
+    <li className="bg-white p-2 d-flex justify-content-between align-items-center shadow-sm rounded-2 mb-2">
+      <p className="mb-0">{text}</p>
+      <section>
+        <span
+          className={
+            amount < 0 ? "text-danger fw-bold" : "text-success fw-bold"
+          }
+        >
+          {sing}${Math.abs(amount)}
+        </span>
+        <button
+          className="btn btn-sm ms-2"
+          onClick={() => deleteTransaction(transaction.id)}
+        >
+          <FontAwesomeIcon className="text-danger" icon="xmark" />
+        </button>
+      </section>
     </li>
   );
 };

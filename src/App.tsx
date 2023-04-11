@@ -8,11 +8,7 @@ import {
 } from "./components";
 import { GlobalProvider } from "./context/GlobalState";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faArrowUp,
-  faArrowDown,
-  faChevronDown,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const App = () => {
   return (
@@ -30,5 +26,5 @@ const App = () => {
   );
 };
 
-library.add(faArrowUp, faArrowDown, faChevronDown);
+library.add(faChevronDown, faXmark);
 export default App;

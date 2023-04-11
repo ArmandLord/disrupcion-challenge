@@ -5,17 +5,21 @@ import { Transaction } from "./Transaction";
 export const TransactionList = () => {
   const { transactions } = useContext(GlobalContext);
 
+  if (transactions.length === 0) {
+    return <p>No transactions</p>;
+  }
+
   return (
-    <div>
+    <div
+      style={{
+        marginBottom: "5rem",
+      }}
+    >
       <h3>History</h3>
-      <ul>
-        {transactions.length === 0 ? (
-          <p>No transactions</p>
-        ) : (
-          transactions.map((transaction) => (
-            <Transaction key={transaction.id} transaction={transaction} />
-          ))
-        )}
+      <ul className="list-unstyled">
+        {transactions.map((transaction) => (
+          <Transaction key={transaction.id} transaction={transaction} />
+        ))}
       </ul>
     </div>
   );
