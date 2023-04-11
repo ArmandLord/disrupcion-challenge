@@ -8,7 +8,7 @@ export const TransactionList = () => {
   if (transactions.length === 0) {
     return (
       <div className="card p-3 shadow-sm rounded-4 mb-5 text-center">
-        <p>Sin transacciones recientes</p>
+        <p className="m-0">Sin transacciones recientes</p>
       </div>
     );
   }
@@ -22,7 +22,7 @@ export const TransactionList = () => {
       <small className="fw-bold">Hoy - 6 Dic.</small>
       {!transactions.some((transaction) => !transaction.old) && (
         <div className="card p-3 shadow-sm rounded-4 mb-5 text-center">
-          <p>Sin transacciones recientes</p>
+          <p className="m-0">Sin transacciones recientes</p>
         </div>
       )}
       <ul className="list-unstyled">
