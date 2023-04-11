@@ -38,13 +38,20 @@ export const IncomeExpenses = () => {
           <p className="fs-4 fw-bold text-danger">-${expense}</p>
         </div>
       </div>
-      <div
-        style={{ fontSize: "12px" }}
-        className="d-flex flex-column align-items-center text-secondary"
+      <a
+        href="#list-transactions"
+        style={{
+          textDecoration: "none",
+        }}
       >
-        <small>Ver analiticas</small>
-        <FontAwesomeIcon icon="chevron-down" />
-      </div>
+        <div
+          style={{ fontSize: "12px" }}
+          className="d-flex flex-column align-items-center text-secondary"
+        >
+          <small>Ver analiticas</small>
+          <FontAwesomeIcon icon="chevron-down" />
+        </div>
+      </a>
     </div>
   );
 };
